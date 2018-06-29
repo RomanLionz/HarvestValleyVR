@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c7dd98947e964cb4c8cb8d86d3dd4221
-timeCreated: 1530279301
+guid: 506ada45cbd14df42bad8829c92d348c
+timeCreated: 1530280476
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Island_Small
+    4300000: Tool_FishingRod
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -41,7 +41,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 30
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

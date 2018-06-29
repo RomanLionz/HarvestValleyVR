@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c7dd98947e964cb4c8cb8d86d3dd4221
-timeCreated: 1530279301
+guid: b81f2da40ee887a4bb7453faa017aad6
+timeCreated: 1530280478
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -8,9 +8,10 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: lambert1
+    2100002: lambert2
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Island_Small
+    4300000: Tool_Hammer
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -41,7 +42,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 30
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
