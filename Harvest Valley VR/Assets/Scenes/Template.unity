@@ -22168,22 +22168,6 @@ Prefab:
       propertyPath: m_Name
       value: Island Small (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 4371380975899572, guid: 6b08d2a54c0fa3d4c844c67e88cffc2c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.1761966
-      objectReference: {fileID: 0}
-    - target: {fileID: 4371380975899572, guid: 6b08d2a54c0fa3d4c844c67e88cffc2c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.1761968
-      objectReference: {fileID: 0}
-    - target: {fileID: 4371380975899572, guid: 6b08d2a54c0fa3d4c844c67e88cffc2c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2.1761968
-      objectReference: {fileID: 0}
-    - target: {fileID: 4371380975899572, guid: 6b08d2a54c0fa3d4c844c67e88cffc2c, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -67.143005
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b08d2a54c0fa3d4c844c67e88cffc2c, type: 2}
   m_IsPrefabParent: 0
