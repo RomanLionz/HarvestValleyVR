@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c7dd98947e964cb4c8cb8d86d3dd4221
-timeCreated: 1530279301
+guid: 0c5b43229c921fe4bb5d942d25932489
+timeCreated: 1530622936
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Island_Small
+    4300000: Rock_style2_C
   externalObjects: {}
   materials:
     importMaterials: 1
