@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4829158053992372}
   - component: {fileID: 33146663643233038}
   - component: {fileID: 23339379416348834}
+  - component: {fileID: 64852764043201994}
   m_Layer: 0
   m_Name: Chicken Coop
   m_TagString: Untagged
@@ -81,4 +82,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1159921934170550}
+  m_Mesh: {fileID: 4300002, guid: 01146722f94a1ba44a4fe93669bc2196, type: 3}
+--- !u!64 &64852764043201994
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159921934170550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 01146722f94a1ba44a4fe93669bc2196, type: 3}
