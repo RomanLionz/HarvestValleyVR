@@ -26681,6 +26681,25 @@ Transform:
   m_PrefabParentObject: {fileID: 4273741334656514, guid: 770e8255b6734bb4cbf9543edc8dc13b,
     type: 2}
   m_PrefabInternal: {fileID: 1018352336}
+--- !u!1 &1018372801 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1159921934170550, guid: f38b90048eddaf34f96a45b0557e35cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1232116265}
+--- !u!64 &1018372805
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018372801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 01146722f94a1ba44a4fe93669bc2196, type: 3}
 --- !u!1001 &1018785934
 Prefab:
   m_ObjectHideFlags: 0
@@ -31531,10 +31550,6 @@ Prefab:
     - target: {fileID: 4829158053992372, guid: f38b90048eddaf34f96a45b0557e35cd, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4829158053992372, guid: f38b90048eddaf34f96a45b0557e35cd, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -164.645
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f38b90048eddaf34f96a45b0557e35cd, type: 2}
@@ -38892,6 +38907,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1544201077}
   m_Mesh: {fileID: 4300206, guid: a289e7d09632a5e449a0d17e12adf39c, type: 3}
+--- !u!1 &1545377217 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1568973433033944, guid: a5ebed996e924c743b156ce809aace13,
+    type: 2}
+  m_PrefabInternal: {fileID: 987962608}
+--- !u!64 &1545377221
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1545377217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 27e93d71cabe78c47bb51261a3aff8b4, type: 3}
 --- !u!1001 &1548796152
 Prefab:
   m_ObjectHideFlags: 0

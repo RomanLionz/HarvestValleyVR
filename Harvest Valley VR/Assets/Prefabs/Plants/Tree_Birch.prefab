@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4872044146484332}
   - component: {fileID: 33450962984901272}
   - component: {fileID: 23617095214924396}
+  - component: {fileID: 64221602036763740}
   m_Layer: 0
   m_Name: Tree_Birch
   m_TagString: Untagged
@@ -81,4 +82,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728837609174398}
+  m_Mesh: {fileID: 4300000, guid: 1882d2927d41d654ba85576dc383e969, type: 3}
+--- !u!64 &64221602036763740
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728837609174398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 1882d2927d41d654ba85576dc383e969, type: 3}
