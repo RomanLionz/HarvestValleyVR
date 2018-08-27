@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 53a387a3aa83f30448603237fdecf95c
+timeCreated: 1535362783
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Back_L_Toe_1_Jnt
+    100002: Back_L_Toe_2_Jnt_End
+    100004: Back_R_Toe_1_Jnt
+    100006: Back_R_Toe_2_Jnt_End
+    100008: Ball_L_1_Jnt
+    100010: Ball_R_1_Jnt
+    100012: Beak_Bottom_Jnt_End
+    100014: Beak_Top_Jnt_End1
+    100016: Chicken_Adult
+    100018: Chicken_Adult_Root
+    100020: Eye_L_Jnt_End
+    100022: Eye_R_Jnt_End
+    100024: Gobblet_1_Jnt
+    100026: Gobblet_2_Jnt
+    100028: Gobblet_Jnt_End
+    100030: Hair_1_Jnt
+    100032: Hair_2_Jnt
+    100034: Hair_3_Jnt_End
+    100036: Head_Jnt
+    100038: Hip_Jnt
+    100040: Index_L_Toe_1_Jnt
+    100042: Index_L_Toe_2_Jnt_End
+    100044: Index_R_Toe_1_Jnt
+    100046: Index_R_Toe_2_Jnt_End
+    100048: Knee_L_1_Jnt
+    100050: Knee_R_1_Jnt
+    100052: Leg_L_1_Jnt
+    100054: Leg_R_1_Jnt
+    100056: Middle_L_Toe_1_Jnt
+    100058: Middle_L_Toe_2_Jnt_End
+    100060: Middle_R_Toe_1_Jnt
+    100062: Middle_R_Toe_2_Jnt_End
+    100064: Pinky_L_Toe_1_Jnt
+    100066: Pinky_L_Toe_2_Jnt_End
+    100068: Pinky_R_Toe_1_Jnt
+    100070: Pinky_R_Toe_2_Jnt_End
+    100072: Tail_1_Jnt
+    100074: Tail_2_Jnt
+    100076: Tail_3_Jnt_End
+    100078: //RootNode
+    100080: Wing_L_1_Jnt
+    100082: Wing_L_2_Jnt
+    100084: Wing_L_3_Jnt
+    100086: Wing_L_4_Jnt_End
+    100088: Wing_R_1_Jnt
+    100090: Wing_R_2_Jnt
+    100092: Wing_R_3_Jnt
+    100094: Wing_R_4_Jnt_End
+    400000: Back_L_Toe_1_Jnt
+    400002: Back_L_Toe_2_Jnt_End
+    400004: Back_R_Toe_1_Jnt
+    400006: Back_R_Toe_2_Jnt_End
+    400008: Ball_L_1_Jnt
+    400010: Ball_R_1_Jnt
+    400012: Beak_Bottom_Jnt_End
+    400014: Beak_Top_Jnt_End1
+    400016: Chicken_Adult
+    400018: Chicken_Adult_Root
+    400020: Eye_L_Jnt_End
+    400022: Eye_R_Jnt_End
+    400024: Gobblet_1_Jnt
+    400026: Gobblet_2_Jnt
+    400028: Gobblet_Jnt_End
+    400030: Hair_1_Jnt
+    400032: Hair_2_Jnt
+    400034: Hair_3_Jnt_End
+    400036: Head_Jnt
+    400038: Hip_Jnt
+    400040: Index_L_Toe_1_Jnt
+    400042: Index_L_Toe_2_Jnt_End
+    400044: Index_R_Toe_1_Jnt
+    400046: Index_R_Toe_2_Jnt_End
+    400048: Knee_L_1_Jnt
+    400050: Knee_R_1_Jnt
+    400052: Leg_L_1_Jnt
+    400054: Leg_R_1_Jnt
+    400056: Middle_L_Toe_1_Jnt
+    400058: Middle_L_Toe_2_Jnt_End
+    400060: Middle_R_Toe_1_Jnt
+    400062: Middle_R_Toe_2_Jnt_End
+    400064: Pinky_L_Toe_1_Jnt
+    400066: Pinky_L_Toe_2_Jnt_End
+    400068: Pinky_R_Toe_1_Jnt
+    400070: Pinky_R_Toe_2_Jnt_End
+    400072: Tail_1_Jnt
+    400074: Tail_2_Jnt
+    400076: Tail_3_Jnt_End
+    400078: //RootNode
+    400080: Wing_L_1_Jnt
+    400082: Wing_L_2_Jnt
+    400084: Wing_L_3_Jnt
+    400086: Wing_L_4_Jnt_End
+    400088: Wing_R_1_Jnt
+    400090: Wing_R_2_Jnt
+    400092: Wing_R_3_Jnt
+    400094: Wing_R_4_Jnt_End
+    2100000: lambert1
+    2100002: Eye_MT
+    4300000: Chicken_Adult
+    7400000: Walking_Forward
+    9500000: //RootNode
+    13700000: Chicken_Adult
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walking_Forward
+      takeName: Walking_Forward
+      firstFrame: 243
+      lastFrame: 259
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
