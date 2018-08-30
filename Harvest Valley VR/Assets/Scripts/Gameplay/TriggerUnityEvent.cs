@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent( typeof( BoxCollider ) )]
 public class TriggerUnityEvent : MonoBehaviour {
 
 	public string instigatorTag = "Untagged";
@@ -17,10 +17,10 @@ public class TriggerUnityEvent : MonoBehaviour {
 
 
 	BoxCollider boxCollider; // Editor only
-	
+
 
 	public void OnDrawGizmos() {
-		if(boxCollider == null)
+		if( boxCollider == null )
 			boxCollider = GetComponent<BoxCollider>();
 		Gizmos.color = new Color( 0.5f, 1f, 0.5f, 0.5f );
 		Vector3 pos = transform.position + Vector3.Scale(boxCollider.center, transform.localScale);
