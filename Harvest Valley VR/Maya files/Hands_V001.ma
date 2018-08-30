@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: Hands_V001.ma
-//Last modified: Thu, Aug 30, 2018 04:12:32 PM
+//Last modified: Thu, Aug 30, 2018 04:13:15 PM
 //Codeset: 1252
 requires maya "2017ff04";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -13,15 +13,15 @@ fileInfo "cutIdentifier" "201702071345-1015190";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 createNode transform -s -n "persp";
 	rename -uid "C9D4DAF0-4693-F53C-A8AB-4B9FCB65A2E1";
-	setAttr ".t" -type "double3" -7.6145710221708498 2.6581506820168146 24.091279043903569 ;
-	setAttr ".r" -type "double3" -447.93835229941345 -276.59999999997768 8.3016361581148289e-014 ;
+	setAttr ".t" -type "double3" -10.771963495108411 1.7551364613949278 26.91507278416368 ;
+	setAttr ".r" -type "double3" -749.73835229912936 -421.79999999991765 6.7306095300392427e-015 ;
 	setAttr ".rp" -type "double3" 8.8817841970012523e-015 -2.6645352591003757e-014 5.6843418860808015e-014 ;
 	setAttr ".rpt" -type "double3" -6.2299933260477671e-014 4.209395896128325e-014 -2.0336960390033881e-014 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "44976992-455C-F9E8-C2A5-57917C25416B";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 2.8116713977798922;
+	setAttr ".coi" 4.0991949642720042;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -143,7 +143,7 @@ createNode mesh -n "polySurface10Shape" -p "polySurface10";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:695]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.31976915895938873 ;
+	setAttr ".pv" -type "double2" 0.66646316647529602 0.83885279297828674 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 1279 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.55397922 0.89610523 0.49999973
@@ -1341,7 +1341,7 @@ createNode mesh -n "polySurface10Shape" -p "polySurface10";
 		 0.0548 1;
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 16 ".pt";
+	setAttr -s 22 ".pt";
 	setAttr ".pt[61]" -type "float3" 0.0008692079 0.00048043954 -0.013020041 ;
 	setAttr ".pt[62]" -type "float3" 0.0008692079 0.00048043954 -0.013020041 ;
 	setAttr ".pt[63]" -type "float3" 0.0008692079 0.00048043954 -0.013020041 ;
@@ -1350,6 +1350,8 @@ createNode mesh -n "polySurface10Shape" -p "polySurface10";
 	setAttr ".pt[66]" -type "float3" 0.0008692079 0.00048043954 -0.013020041 ;
 	setAttr ".pt[67]" -type "float3" 0.0008692079 0.00048043954 -0.013020041 ;
 	setAttr ".pt[68]" -type "float3" 0.0008692079 0.00048043954 -0.013020041 ;
+	setAttr ".pt[498]" -type "float3" -0.0069265831 -0.0072964369 -0.019950356 ;
+	setAttr ".pt[502]" -type "float3" -0.017938644 -0.014761625 -0.032242261 ;
 	setAttr ".pt[525]" -type "float3" -0.0004710413 5.5906363e-005 -0.0094409678 ;
 	setAttr ".pt[526]" -type "float3" -0.0004710413 5.5906363e-005 -0.0094409678 ;
 	setAttr ".pt[527]" -type "float3" -0.0004710413 5.5906363e-005 -0.0094409678 ;
@@ -1358,6 +1360,9 @@ createNode mesh -n "polySurface10Shape" -p "polySurface10";
 	setAttr ".pt[530]" -type "float3" -0.0004710413 5.5906363e-005 -0.0094409678 ;
 	setAttr ".pt[531]" -type "float3" -0.0004710413 5.5906363e-005 -0.0094409678 ;
 	setAttr ".pt[532]" -type "float3" -0.0004710413 5.5906363e-005 -0.0094409678 ;
+	setAttr ".pt[586]" -type "float3" -0.0077339201 -0.03765709 0.0050798571 ;
+	setAttr ".pt[587]" -type "float3" -0.027561745 -0.01621875 -0.019181538 ;
+	setAttr ".pt[588]" -type "float3" 1.1175871e-008 -3.7252903e-009 2.9802322e-008 ;
 	setAttr -s 633 ".vt";
 	setAttr ".vt[0:165]"  -6.56011009 -0.28035101 23.62964058 -6.59388351 -0.24488248 23.60076714
 		 -6.53950977 -0.24515347 23.61800766 -6.5330267 -0.30249724 23.67224884 -6.49496698 -0.23746867 23.65076065
