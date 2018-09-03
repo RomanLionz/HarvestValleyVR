@@ -5,5 +5,6 @@ using UnityEngine;
 public interface IBlendable<T> {
 
 	T Lerp( T b, float t );
+	T Slerp( T b, float t );
 
 }

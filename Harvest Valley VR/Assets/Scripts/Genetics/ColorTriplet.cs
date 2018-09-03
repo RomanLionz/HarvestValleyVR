@@ -43,4 +43,23 @@ public class ColorTriplet : IBlendable<ColorTriplet> {
 		);
 	}
 
+	ColorTriplet IBlendable<ColorTriplet>.Slerp( ColorTriplet b, float t ) {
+		return new ColorTriplet(
+			LerpHSV( this[0], b[0], t ),
+			LerpHSV( this[1], b[1], t ),
+			LerpHSV( this[2], b[2], t )
+		);
+	}
+	
+	Color LerpHSV( Color a, Color b, float t ) {
+		float aH, aS, aV;
+		float bH, bS, bV;
+		Color.RGBToHSV( a, out aH, out aS, out aV );
+		Color.RGBToHSV( b, out bH, out bS, out bV );
+		float h = Mathf.LerpAngle( aH * 360, bH * 360, t ) / 360f;
+		float s = Mathf.Lerp( aS, bS, t );
+		float v = Mathf.Lerp( aV, bV, t );
+		return Color.HSVToRGB( h, s, v );
+	}
+
 }

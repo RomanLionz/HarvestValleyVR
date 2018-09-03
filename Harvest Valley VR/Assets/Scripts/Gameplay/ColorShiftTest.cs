@@ -34,7 +34,7 @@ public class ColorShiftTest : MonoBehaviour {
 	}
 	
 	void ApplyColor() {
-		mpb.SetColorTriplet( colors.GetNormalized( hueShift ) );
+		mpb.SetColorTriplet( colors.GetNormalized( hueShift, slerp:true ) );
 		rnd.SetPropertyBlock( mpb );
 	}
 
