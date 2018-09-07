@@ -6,7 +6,7 @@ using UnityEditor;
 #endif
 using System.Linq;
 
-[RequireComponent( typeof(MeshFilter), typeof( MeshRenderer ) )]
+[RequireComponent( typeof( MeshFilter ), typeof( MeshRenderer ) )]
 public class WaterConeEmitter : MonoBehaviour {
 
 	public class Particle {
@@ -14,13 +14,16 @@ public class WaterConeEmitter : MonoBehaviour {
 		public Vector3 position;
 		public Vector3 velocity;
 
+		public Particle() {
+		}
+
 		public Particle( Vector3 position, Vector3 velocity ) {
 			this.position = position;
 			this.velocity = velocity;
 		}
 
-		public void StepNext( float dt ) {
-			velocity += Physics.gravity * dt;
+		public void StepNext( float dt, Vector3 gravity ) {
+			velocity += gravity * dt;
 			position += velocity * dt;
 		}
 
@@ -29,19 +32,26 @@ public class WaterConeEmitter : MonoBehaviour {
 	public class ParticleRing {
 
 		public Particle[] particles;
-		public float time = 0;
+		public float lifeTime = 0;
+		public float spawnTime;
+		public bool active = true;
 
 		public Particle this[int i] {
 			get { return particles[i]; }
 		}
 
+		public ParticleRing() {
+		}
+
 		public ParticleRing( Particle[] particles ) {
 			this.particles = particles;
-			this.time = 0;
+			this.lifeTime = 0;
+			this.spawnTime = Time.time;
 		}
-		public void StepNext(float dt ) {
-			time += dt;
-			particles.ForEach( p => p.StepNext( dt ) );
+		public void StepNext( float dt, Vector3 gravity ) {
+			lifeTime += dt;
+			foreach( Particle p in particles )
+				p.StepNext( dt, gravity );
 		}
 	}
 
@@ -61,11 +71,15 @@ public class WaterConeEmitter : MonoBehaviour {
 	MeshRenderer rnd;
 
 	Mesh mesh;
+	ParticleRing[] particleRings;
 	int[] triangleIndices;
-	List<Vector3> vertices;
-	List<Vector2> uv0;
+	Vector3[] vertices;
+	List<Vector3> uv0;
 
-	List<ParticleRing> particleRings = new List<ParticleRing>();
+	int ringCount;
+	int vertsPerRing;
+	int quadCount;
+	int vertexCount;
 
 	private void OnDrawGizmos() {
 
@@ -76,10 +90,12 @@ public class WaterConeEmitter : MonoBehaviour {
 			Gizmos.DrawSphere( posDir.pos, emissionRadius * 0.05f );
 			Gizmos.DrawLine( posDir.pos, posDir.pos + posDir.dir * emissionRadius * 0.5f );
 		}
-		/*
-		foreach( ParticleRing particleRing in particleRings ) {
-			foreach( Particle particle in particleRing.particles ) {
-				Gizmos.DrawSphere( particle.position, emissionRadius * 0.1f );
+		
+		/*if( particleRings != null ) {
+			foreach( ParticleRing particleRing in particleRings ) {
+				foreach( Particle particle in particleRing.particles ) {
+					Gizmos.DrawSphere( particle.position, emissionRadius * 0.1f );
+				}
 			}
 		}*/
 
@@ -88,12 +104,142 @@ public class WaterConeEmitter : MonoBehaviour {
 	private void Awake() {
 		this.mf = GetComponent<MeshFilter>();
 		this.rnd = GetComponent<MeshRenderer>();
+
+		ringCount = Mathf.CeilToInt( (ringMaxLifetime / emissionInterval) ) + 1;
+		vertsPerRing = angularSegments + 1;
+		vertexCount = ringCount * vertsPerRing;
+		quadCount = (ringCount - 1) * angularSegments;
+
+		mesh = new Mesh();
+		mesh.MarkDynamic();
+		mf.sharedMesh = mesh;
+
+		particleRings = new ParticleRing[ringCount];
+		for( int i = 0; i < ringCount; i++ ) {
+			particleRings[i] = new ParticleRing();
+			SetParticleRingSpawnPos( particleRings[i] );
+			if( i > 0 )
+				particleRings[i].active = false;
+		}
+
+		triangleIndices = new int[quadCount * 2 * 3];
+		vertices = new Vector3[vertexCount];
+		uv0 = new List<Vector3>( vertexCount );
+		for( int i = 0; i < vertexCount; i++ )
+			uv0.Add( default( Vector3 ) );
+
 	}
+
+	/*
+	private void OnGUI() {
+		Rect r = new Rect(32,32,512,512);
+		GUILayout.BeginArea( r );
+		GUILayout.Label( "Particles" );
+		for( int i = 0; i < particleRings.Length; i++ ) {
+			ParticleRing ring = particleRings[i];
+			GUILayout.Label( "[" + i + "] Active: " + ring.active + " SpawnTime: " + ring.spawnTime + " Lifetime: " + ring.lifeTime );
+		}
+		GUILayout.EndArea();
+	}*/
 
 	IEnumerator Start() {
 		while( true ) {
 			yield return new WaitForSeconds( emissionInterval );
 			EmitRing();
+		}
+	}
+	
+	public void FixedUpdate() {
+		float dt = Time.fixedDeltaTime;
+
+		// Make sure root ring is always at the base
+		Vector3 gravity = Physics.gravity;
+		SetParticleRingSpawnPos( particleRings[emissionRootRingIndex] );
+		for( int i = 0; i < ringCount; i++ ) {
+			if(i != emissionRootRingIndex )
+				particleRings[i].StepNext( dt, gravity );
+		}
+
+	}
+
+	void Update() {
+		UpdateMesh();
+	}
+
+	public void UpdateMesh() {
+
+		Transform tf = transform;
+		for( int r = 0; r < ringCount; r++ ) {
+			int indexOffset = vertsPerRing * r;
+			int rId = (emissionRootRingIndex + 1 + r) % ringCount;
+			float uvY = particleRings[rId].lifeTime / ringMaxLifetime;
+			float uvZ = particleRings[rId].spawnTime;
+			for( int i = 0; i < particleRings[rId].particles.Length+1; i++ ) {
+				int index = indexOffset+i;
+				float uvX = i / ((float)particleRings[rId].particles.Length);
+				vertices[index] = tf.InverseTransformPoint( particleRings[rId].particles[ i % particleRings[rId].particles.Length].position );
+				uv0[index] = new Vector3( uvX, uvY, uvZ );
+			}
+		}
+
+		// Do the quads
+		int ti = 0;
+		for( int r = 0; r < ringCount - 1; r++ ) {
+			int ringRootIndexCurrent = vertsPerRing * r;
+			int ringRootIndexNext = vertsPerRing * (r + 1);
+			for( int a = 0; a < angularSegments; a++ ) {
+				int vc0 = ringRootIndexCurrent + a;
+				int vc1 = ringRootIndexCurrent + a + 1;
+				int vn0 = ringRootIndexNext + a;
+				int vn1 = ringRootIndexNext + a + 1;
+				triangleIndices[ti++] = vc0;
+				triangleIndices[ti++] = vn0;
+				triangleIndices[ti++] = vn1;
+				triangleIndices[ti++] = vc0;
+				triangleIndices[ti++] = vn1;
+				triangleIndices[ti++] = vc1;
+			}
+		}
+
+		mesh.Clear();
+		mesh.vertices = vertices;
+		mesh.SetUVs( 0, uv0 );
+		mesh.SetTriangles( triangleIndices, 0 ); // TODO: Only once?
+
+	}
+
+	int emissionRootRingIndex = 0;
+	void EmitRing() {
+		emissionRootRingIndex = (emissionRootRingIndex + 1) % ringCount;
+		SetParticleRingSpawnPos( particleRings[emissionRootRingIndex] );
+		particleRings[emissionRootRingIndex].active = true;
+		CullRings();
+	}
+
+	
+	public void CullRings() {
+
+		for( int i = 0; i < ringCount; i++ ) {
+			if( particleRings[i].lifeTime > ringMaxLifetime + emissionInterval ) {
+				particleRings[i].active = false; // ded
+			}
+		}
+
+	}
+
+	void SetParticleRingSpawnPos( ParticleRing ring ) {
+		for( int i = 0; i < angularSegments; i++ ) {
+			PosDir posDir = GetSpawnCoordinate( i );
+			if( ring.particles == null ) {
+				ring.particles = new Particle[angularSegments];
+				for( int p = 0; p < angularSegments; p++ ) {
+					ring.particles[p] = new Particle();
+				}
+			}
+			ring.particles[i].position = posDir.pos;
+			ring.particles[i].velocity = posDir.dir * emissionSpeed;
+			particleRings[emissionRootRingIndex].spawnTime = Time.time;
+			particleRings[emissionRootRingIndex].lifeTime = 0;
 		}
 	}
 
@@ -109,116 +255,12 @@ public class WaterConeEmitter : MonoBehaviour {
 		Vector3 bendAxis = Vector3.Cross( radialDir, Vector3.forward );
 		Vector3 rayDir = Quaternion.AngleAxis( -emissionAngle, bendAxis ) * Vector3.forward;
 
-		return new PosDir{
+		return new PosDir {
 			pos = transform.TransformPoint( radialDir * emissionRadius ),
 			dir = transform.TransformDirection( rayDir )
 		};
 	}
 
-
-	void EmitRing() {
-		ParticleRing ring = GetNewEmittedParticleRing();
-		particleRings.Insert( 1, ring );
-		CullRings();
-	}
-
-	public void CullRings() {
-
-		for( int i = particleRings.Count - 1; i >= 1; i-- ) {
-			if( particleRings[i-1].time >= ringMaxLifetime ) {
-				particleRings.RemoveAt( i ); // Remove is previous one is timed out
-			}
-		}
-
-	}
-
-	ParticleRing GetNewEmittedParticleRing() {
-		Particle[] particles = new Particle[angularSegments];
-		for( int i = 0; i < angularSegments; i++ ) {
-			PosDir posDir = GetSpawnCoordinate( i );
-			particles[i] = new Particle( posDir.pos, posDir.dir * emissionSpeed );
-		}
-		return new ParticleRing( particles );
-	}
-
-	// public Vector3 GetEmission
-
-	public void FixedUpdate() {
-		float dt = Time.fixedDeltaTime;
-		int ringCount = particleRings.Count;
-
-		// Make sure root ring is always at the base
-		if(ringCount == 0 ) {
-			particleRings.Add( GetNewEmittedParticleRing() );
-		} else if( ringCount > 0 ) {
-			particleRings[0] = GetNewEmittedParticleRing();
-			for( int i = 1; i < particleRings.Count; i++ ) {
-				particleRings[i].StepNext( dt );
-			}
-		}
-
-	}
-
-	void Update() {
-		UpdateMesh();
-	}
-
-	public void UpdateMesh() {
-
-		if( particleRings.Count <= 1 )
-			return;
-
-		if( mesh == null ) {
-			mesh = new Mesh();
-			mesh.MarkDynamic();
-			mf.sharedMesh = mesh;
-		}
-
-		int vertexCount = particleRings.Count * angularSegments;
-		int quadCount = (particleRings.Count - 1) * angularSegments;
-		triangleIndices = new int[quadCount * 2 * 3];
-
-		// Set up vertices
-		vertices = new List<Vector3>();
-		uv0 = new List<Vector2>();
-
-		foreach( ParticleRing ring in particleRings ) {
-			float uvY = ring.time / ringMaxLifetime;
-			for( int i = 0; i < ring.particles.Length; i++ ) {
-				vertices.Add( transform.InverseTransformPoint( ring.particles[i].position ) );
-				float uvX = i / ((float)ring.particles.Length);
-				uv0.Add( new Vector2( uvX, uvY ) );
-			}
-		}
-
-		// Do the quads
-		int ti = 0;
-		for( int r = 0; r < particleRings.Count - 1; r++ ) {
-			int ringRootIndexCurrent = angularSegments * r;
-			int ringRootIndexNext = angularSegments * (r + 1);
-			for( int a = 0; a < angularSegments; a++ ) {
-				int vc0 = ringRootIndexCurrent + a;
-				int vc1 = ringRootIndexCurrent + (a+1)%angularSegments;
-				int vn0 = ringRootIndexNext + a;
-				int vn1 = ringRootIndexNext + (a+1)%angularSegments;
-				triangleIndices[ti++] = vc0;
-				triangleIndices[ti++] = vn0;
-				triangleIndices[ti++] = vn1;
-				triangleIndices[ti++] = vc0;
-				triangleIndices[ti++] = vn1;
-				triangleIndices[ti++] = vc1;
-			}
-		}
-
-		mesh.Clear();
-		mesh.SetVertices( vertices );
-		mesh.SetUVs( 0, uv0 );
-		mesh.SetTriangles( triangleIndices, 0 ); // TODO: Only once?
-
-	}
-
-
-	
 
 
 }
