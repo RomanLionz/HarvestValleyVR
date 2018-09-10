@@ -1,44 +1,17 @@
 fileFormatVersion: 2
-guid: b1227ccfc73e8a24bb14f3bb7cdc5426
-timeCreated: 1535641958
+guid: 39308161512d81540b91ca43a65ec667
+timeCreated: 1536572915
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: pCylinder1
-    100004: polySurface10
-    100006: pSphere1
-    100008: polySurface8
-    100010: handGlove_GemHole
-    100012: hands:r_hand_world
     400000: //RootNode
-    400002: pCylinder1
-    400004: polySurface10
-    400006: pSphere1
-    400008: polySurface8
-    400010: handGlove_GemHole
-    400012: hands:r_hand_world
     2100000: lambert1
-    2300000: pCylinder1
-    2300002: polySurface10
-    2300004: pSphere1
-    2300006: //RootNode
-    2300008: polySurface8
-    2300010: handGlove_GemHole
-    3300000: pCylinder1
-    3300002: polySurface10
-    3300004: pSphere1
-    3300006: //RootNode
-    3300008: polySurface8
-    3300010: handGlove_GemHole
-    4300000: polySurface10
-    4300002: pCylinder1
-    4300004: pSphere1
-    4300006: pCylinder2
-    4300008: polySurface8
-    4300010: R_handGlove_Hole
-    4300012: handGlove_GemHole
+    2100002: lambert4
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Well
   externalObjects: {}
   materials:
     importMaterials: 1

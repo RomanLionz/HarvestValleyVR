@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: Well.ma
-//Last modified: Mon, Sep 10, 2018 12:56:07 PM
+//Last modified: Mon, Sep 10, 2018 12:56:06 PM
 //Codeset: 1252
 file -rdi 1 -ns "IndoorInterior" -dr 1 -rfn "IndoorInteriorRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/Christoffer/Documents/HarvestValleyVR/Harvest Valley VR/Maya files/Buildings/IndoorInterior.ma";
@@ -17,13 +17,13 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 createNode transform -s -n "persp";
 	rename -uid "6F12D23A-403B-B45A-8F22-70A0DB15071F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.1338986481870297 208.85545883321601 -353.90385685190535 ;
+	setAttr ".t" -type "double3" 17.750329094043391 256.09168794286137 -452.39010752674193 ;
 	setAttr ".r" -type "double3" -745.53835278425186 -9544.9999999992124 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BDA43B63-421E-8541-C3A9-CFA2F1C5A8AC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 365.45845037691925;
+	setAttr ".coi" 475.0259902147468;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
