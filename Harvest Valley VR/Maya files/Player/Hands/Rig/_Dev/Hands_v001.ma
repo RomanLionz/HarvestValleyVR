@@ -1,11 +1,7 @@
 //Maya ASCII 2017ff04 scene
 //Name: Hands_v001.ma
-//Last modified: Mon, Sep 10, 2018 02:44:11 PM
+//Last modified: Tue, Sep 11, 2018 10:09:57 AM
 //Codeset: 1252
-file -rdi 1 -ns ":" -dr 1 -rfn "RightHandRN" -op "VERS|2017|UVER|undef|MADE|undef|CHNG|Mon, Jan 09, 2017 10:25:31 AM|ICON|undef|INFO|undef|OBJN|852|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
-		 -typ "mayaBinary" "C:/Users/Christoffer/Desktop/hands/RightHand.mb";
-file -r -ns ":" -dr 1 -rfn "RightHandRN" -op "VERS|2017|UVER|undef|MADE|undef|CHNG|Mon, Jan 09, 2017 10:25:31 AM|ICON|undef|INFO|undef|OBJN|852|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|"
-		 -typ "mayaBinary" "C:/Users/Christoffer/Desktop/hands/RightHand.mb";
 requires maya "2017ff04";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
 requires "stereoCamera" "10.0";
@@ -19,8 +15,8 @@ fileInfo "cutIdentifier" "201702071345-1015190";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 createNode transform -s -n "persp";
 	rename -uid "9EAEEB4E-4044-1BDF-93DF-C0B964766E2C";
-	setAttr ".t" -type "double3" -52.855845756557585 28.563939383911002 -33.553231532780316 ;
-	setAttr ".r" -type "double3" -22.538351333342732 -846.99999999983561 0 ;
+	setAttr ".t" -type "double3" -47.7426950904322 20.096395332068234 -14.17408825509704 ;
+	setAttr ".r" -type "double3" -20.138351333342474 -833.39999999981956 0 ;
 	setAttr ".rp" -type "double3" 0 7.1054273576010019e-015 1.4210854715202004e-014 ;
 	setAttr ".rpt" -type "double3" -8.5314395353756155e-014 4.9274015980405538e-014 
 		4.0811348974212902e-014 ;
@@ -28,7 +24,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B9D2D8A3-4F5C-584B-7A7D-71BC71159D18";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 72.540865532938341;
+	setAttr ".coi" 56.166596475638983;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -12311,28 +12307,6 @@ createNode pairBlend -n "pairBlend1";
 	setAttr ".txm" 2;
 	setAttr ".tym" 2;
 	setAttr ".tzm" 2;
-createNode reference -n "RightHandRN";
-	rename -uid "1BE80194-4447-D136-00AA-1D8CC83F3766";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"RightHandRN"
-		"RightHandRN" 6
-		2 "|hands:r_hand_world" "translate" " -type \"double3\" -25.943322250766307 4.901 -7.17"
-		
-		2 "|hands:r_hand_world" "rotate" " -type \"double3\" -138.07835952141679 4.7378897271402733 -69.12897802145082"
-		
-		2 "|hands:r_hand_world" "segmentScaleCompensate" " 0"
-		2 "|hands:r_hand_world|hands:b_r_hand" "rotate" " -type \"double3\" 0 0 0"
-		
-		2 "|hands:r_hand_world|hands:b_r_hand" "jointOrient" " -type \"double3\" 40 60.249143954281493 -111.94274897417959"
-		
-		2 "|hands:r_hand_world|hands:b_r_hand" "segmentScaleCompensate" " 0"
-		"RightHandRN" 0;
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "sharedReferenceNode";
-	rename -uid "C1F93DBD-41DD-2AD5-6BCD-45B20CF5A35B";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"sharedReferenceNode";
 createNode groupId -n "groupId203";
 	rename -uid "8FCD51A7-4BA9-9179-430F-E685EF40318D";
 	setAttr ".ihi" 0;
@@ -12345,8 +12319,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 1;
-	setAttr ".unw" 1;
+	setAttr -k on ".o" 11;
+	setAttr ".unw" 11;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -13164,7 +13138,6 @@ connectAttr "Index_finger_1_Jnt_parentConstraint1.ctz" "pairBlend1.itz2";
 connectAttr "Index_finger_1_Jnt_parentConstraint1.crx" "pairBlend1.irx2";
 connectAttr "Index_finger_1_Jnt_parentConstraint1.cry" "pairBlend1.iry2";
 connectAttr "Index_finger_1_Jnt_parentConstraint1.crz" "pairBlend1.irz2";
-connectAttr "sharedReferenceNode.sr" "RightHandRN.sr";
 connectAttr "skinCluster1.og[0]" "groupParts4.ig";
 connectAttr "groupId203.id" "groupParts4.gi";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
