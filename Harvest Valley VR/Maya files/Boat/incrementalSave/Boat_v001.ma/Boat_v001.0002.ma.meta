@@ -1,57 +1,31 @@
 fileFormatVersion: 2
 guid: e7dd897a4c68d854a9c0a533a73a25bd
-timeCreated: 1536670661
+timeCreated: 1536671200
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: imagePlane1
-    100004: pCube1
-    100006: pCube2
-    100008: pCube3
-    100010: pCube4
-    100012: pCylinder306
-    100014: pCylinder307
-    100016: pPlane4
-    100018: pPlane5
-    100020: top1
-    100022: transform2
-    400000: //RootNode
-    400002: imagePlane1
-    400004: pCube1
-    400006: pCube2
-    400008: pCube3
-    400010: pCube4
-    400012: pCylinder306
-    400014: pCylinder307
-    400016: pPlane4
-    400018: pPlane5
-    400020: top1
-    400022: transform2
-    2000000: top1
+    100000: Boat_GasLever
+    100002: Boat_Rudder
+    100004: Boat_StearingWheel
+    100006: //RootNode
+    400000: Boat_GasLever
+    400002: Boat_Rudder
+    400004: Boat_StearingWheel
+    400006: //RootNode
     2100000: lambert1
-    2300000: pCube1
-    2300002: pCube2
-    2300004: pCube3
-    2300006: pCube4
-    2300008: pCylinder306
-    2300010: pCylinder307
-    2300012: pPlane5
-    3300000: pCube1
-    3300002: pCube2
-    3300004: pCube3
-    3300006: pCube4
-    3300008: pCylinder306
-    3300010: pCylinder307
-    3300012: pPlane5
-    4300000: pPlane5
-    4300002: pCube1
-    4300004: pCylinder306
-    4300006: pCylinder307
-    4300008: pCube2
-    4300010: pCube3
-    4300012: pCube4
+    2300000: Boat_GasLever
+    2300002: Boat_Rudder
+    2300004: Boat_StearingWheel
+    2300006: //RootNode
+    3300000: Boat_GasLever
+    3300002: Boat_Rudder
+    3300004: Boat_StearingWheel
+    3300006: //RootNode
+    4300000: Boat
+    4300002: Boat_GasLever
+    4300004: Boat_Rudder
+    4300006: Boat_StearingWheel
     9500000: //RootNode
   externalObjects: {}
   materials:

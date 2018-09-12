@@ -9,23 +9,41 @@ ModelImporter:
     100002: Boat_GasLever
     100004: Boat_Rudder
     100006: Boat_StearingWheel
+    100008: Boat_v001:Boat_GasLever
+    100010: Boat_v001:Boat_Rudder
+    100012: Boat_v001:Boat_StearingWheel
     400000: //RootNode
     400002: Boat_GasLever
     400004: Boat_Rudder
     400006: Boat_StearingWheel
+    400008: Boat_v001:Boat_GasLever
+    400010: Boat_v001:Boat_Rudder
+    400012: Boat_v001:Boat_StearingWheel
     2100000: lambert1
+    2100002: lambert2
     2300000: //RootNode
     2300002: Boat_GasLever
     2300004: Boat_Rudder
     2300006: Boat_StearingWheel
+    2300008: Boat_v001:Boat_GasLever
+    2300010: Boat_v001:Boat_Rudder
+    2300012: Boat_v001:Boat_StearingWheel
     3300000: //RootNode
     3300002: Boat_GasLever
     3300004: Boat_Rudder
     3300006: Boat_StearingWheel
+    3300008: Boat_v001:Boat_GasLever
+    3300010: Boat_v001:Boat_Rudder
+    3300012: Boat_v001:Boat_StearingWheel
     4300000: Boat
     4300002: Boat_GasLever
     4300004: Boat_Rudder
     4300006: Boat_StearingWheel
+    4300008: Tree_Pine
+    4300010: Boat_v001:Boat
+    4300012: Boat_v001:Boat_GasLever
+    4300014: Boat_v001:Boat_Rudder
+    4300016: Boat_v001:Boat_StearingWheel
   externalObjects: {}
   materials:
     importMaterials: 1

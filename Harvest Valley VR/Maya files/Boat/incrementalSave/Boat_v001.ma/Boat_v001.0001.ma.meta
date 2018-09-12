@@ -1,12 +1,31 @@
 fileFormatVersion: 2
 guid: a464d473d315b50459b382c0d77fb15a
-timeCreated: 1536670649
+timeCreated: 1536671095
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Boat_GasLever
+    100002: Boat_Rudder
+    100004: Boat_StearingWheel
+    100006: //RootNode
+    400000: Boat_GasLever
+    400002: Boat_Rudder
+    400004: Boat_StearingWheel
+    400006: //RootNode
+    2100000: lambert1
+    2300000: Boat_GasLever
+    2300002: Boat_Rudder
+    2300004: Boat_StearingWheel
+    2300006: //RootNode
+    3300000: Boat_GasLever
+    3300002: Boat_Rudder
+    3300004: Boat_StearingWheel
+    3300006: //RootNode
+    4300000: Boat
+    4300002: Boat_GasLever
+    4300004: Boat_Rudder
+    4300006: Boat_StearingWheel
     9500000: //RootNode
   externalObjects: {}
   materials:
