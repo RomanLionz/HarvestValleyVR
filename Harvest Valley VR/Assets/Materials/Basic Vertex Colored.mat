@@ -23,8 +23,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Gloss: 0
-    - _Lightingness: 0
+    - _Gloss: 1
+    - _Lightingness: 0.281
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.21323532, g: 0.21323532, b: 0.21323532, a: 1}
