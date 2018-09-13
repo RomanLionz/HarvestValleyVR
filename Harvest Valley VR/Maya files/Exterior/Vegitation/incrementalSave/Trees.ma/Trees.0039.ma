@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: Trees.ma
-//Last modified: Thu, Sep 13, 2018 11:02:51 AM
+//Last modified: Thu, Sep 13, 2018 11:02:45 AM
 //Codeset: 1252
 requires maya "2017ff04";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -14257,14 +14257,14 @@ createNode greasePlaneRenderShape -n "greasePencilPerspArtDrawPlaneShape" -p "gr
 	setAttr ".de" 2;
 createNode transform -n "persp1";
 	rename -uid "1BA64127-4090-B830-5F87-F5A80F698F25";
-	setAttr ".t" -type "double3" -54.498478646583685 16.68054726982205 -80.720069621383104 ;
-	setAttr ".r" -type "double3" -4.5383527336613172 2683.7999999997828 0 ;
+	setAttr ".t" -type "double3" -45.341178500291527 14.427483910914493 -85.407009408940937 ;
+	setAttr ".r" -type "double3" -4.5383527336613172 2679.7999999997851 0 ;
 createNode camera -n "perspShape2" -p "persp1";
 	rename -uid "4B9A2AE2-4E6E-2CFB-EA3D-A98733894865";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 76.30568062870438;
+	setAttr ".coi" 83.367965858176518;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";

@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: Trees.ma
-//Last modified: Thu, Sep 13, 2018 11:02:51 AM
+//Last modified: Thu, Sep 13, 2018 11:02:41 AM
 //Codeset: 1252
 requires maya "2017ff04";
 requires -nodeType "gameFbxExporter" "gameFbxExporter" "1.0";
@@ -15,7 +15,7 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 createNode transform -s -n "persp";
 	rename -uid "C9D4DAF0-4693-F53C-A8AB-4B9FCB65A2E1";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -239.97864469234756 79.585404778081696 378.95784603134734 ;
+	setAttr ".t" -type "double3" -163.49895261933614 55.159529004761126 226.23143007245031 ;
 	setAttr ".r" -type "double3" -8.1383525766099893 333.39999999979432 0 ;
 	setAttr ".rp" -type "double3" 0 4.4408920985006262e-016 0 ;
 	setAttr ".rpt" -type "double3" -1.3429070824547345e-013 -1.899136449664277e-017 
@@ -24,7 +24,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "44976992-455C-F9E8-C2A5-57917C25416B";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 407.72193161214511;
+	setAttr ".coi" 235.17882152505317;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -14257,14 +14257,14 @@ createNode greasePlaneRenderShape -n "greasePencilPerspArtDrawPlaneShape" -p "gr
 	setAttr ".de" 2;
 createNode transform -n "persp1";
 	rename -uid "1BA64127-4090-B830-5F87-F5A80F698F25";
-	setAttr ".t" -type "double3" -54.498478646583685 16.68054726982205 -80.720069621383104 ;
-	setAttr ".r" -type "double3" -4.5383527336613172 2683.7999999997828 0 ;
+	setAttr ".t" -type "double3" -77.006377066059628 18.32897989793203 -101.87599747615444 ;
+	setAttr ".r" -type "double3" -6.3383527336084331 3061.8000000015331 0 ;
 createNode camera -n "perspShape2" -p "persp1";
 	rename -uid "4B9A2AE2-4E6E-2CFB-EA3D-A98733894865";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 76.30568062870438;
+	setAttr ".coi" 95.091832304557528;
 	setAttr ".imn" -type "string" "persp1";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
