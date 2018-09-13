@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff04 scene
 //Name: Bee_V001.ma
-//Last modified: Thu, Sep 13, 2018 11:51:19 AM
+//Last modified: Thu, Sep 13, 2018 11:37:19 AM
 //Codeset: 1252
 file -rdi 1 -ns "IndoorInterior" -dr 1 -rfn "IndoorInteriorRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/Christoffer/Documents/HarvestValleyVR/Harvest Valley VR/Maya files/Buildings/IndoorInterior.ma";
@@ -18,13 +18,13 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 createNode transform -s -n "persp";
 	rename -uid "A8C5D744-42D5-6AEB-EB21-C8A1E21DAF7E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 98.572737829071869 93.924061454805724 3.0475880961532282 ;
-	setAttr ".r" -type "double3" -6.9383527297694725 448.19999999977273 5.0628427558070364e-014 ;
+	setAttr ".t" -type "double3" -57.337019606118531 85.712404422767264 39.750485139223187 ;
+	setAttr ".r" -type "double3" -8.1383527294794238 302.99999999980673 1.4599369844066933e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1F5917BC-4313-8163-B298-3F987E262692";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 91.812643929420872;
+	setAttr ".coi" 74.027675519533346;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
