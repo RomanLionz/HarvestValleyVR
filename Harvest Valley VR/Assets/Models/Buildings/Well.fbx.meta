@@ -9,9 +9,11 @@ ModelImporter:
     400000: //RootNode
     2100000: lambert1
     2100002: lambert4
+    2100004: lambert7
     2300000: //RootNode
     3300000: //RootNode
     4300000: Well
+    4300002: Well_Starter
   externalObjects: {}
   materials:
     importMaterials: 1

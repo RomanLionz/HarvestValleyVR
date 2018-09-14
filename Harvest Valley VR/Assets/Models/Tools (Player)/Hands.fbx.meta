@@ -12,6 +12,7 @@ ModelImporter:
     100008: polySurface8
     100010: handGlove_GemHole
     100012: hands:r_hand_world
+    100014: Hand_ROOT_Jnt
     400000: //RootNode
     400002: pCylinder1
     400004: polySurface10
@@ -19,6 +20,7 @@ ModelImporter:
     400008: polySurface8
     400010: handGlove_GemHole
     400012: hands:r_hand_world
+    400014: Hand_ROOT_Jnt
     2100000: lambert1
     2300000: pCylinder1
     2300002: polySurface10

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0994e0108efd4804e87a8afee293895c
-timeCreated: 1534154081
+timeCreated: 1536915537
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -8,44 +8,44 @@ ModelImporter:
     100000: barrel_medium
     100002: barrel_small
     100004: barrels_loft
-    100006: Bed_shelf
-    100008: book_demon
-    100010: chair_oak
-    100012: chair_oak1
-    100014: chopping_board_wood
-    100016: clay_mug
-    100018: clay_mug1
-    100020: door_frame
-    100022: door_knob
-    100024: door_purple
-    100026: door_rug_green
-    100028: door_stone_staires
-    100030: floor_book
-    100032: fridge
-    100034: fridge_bottom_door
-    100036: fridge_bottom_door_handle
-    100038: fridge_top_door
-    100040: fridge_top_door_handle
-    100042: house_base
-    100044: //RootNode
-    100046: jar_salt
-    100048: kitchen_big_pot
-    100050: kitchen_counter
-    100052: kitchen_pan
-    100054: kitchen_roof_rack
-    100056: kitchen_sink
-    100058: kitchen_sink_l_handle
-    100060: kitchen_sink_r_handle
-    100062: knife_iron_cleaver
-    100064: knife_iron_cutting
-    100066: log_holder
-    100068: log_oak
-    100070: log_pile
-    100072: money_bag
-    100074: money_coin
-    100076: money_coin_stack
-    100078: pCube12
-    100080: pCube125
+    100006: Bed
+    100008: Bed_shelf
+    100010: book_demon
+    100012: chair_oak
+    100014: chair_oak1
+    100016: Chest
+    100018: chopping_board_wood
+    100020: clay_mug
+    100022: clay_mug1
+    100024: door_frame
+    100026: door_knob
+    100028: door_purple
+    100030: door_rug_green
+    100032: door_stone_staires
+    100034: floor_book
+    100036: fridge
+    100038: fridge_bottom_door
+    100040: fridge_bottom_door_handle
+    100042: fridge_top_door
+    100044: fridge_top_door_handle
+    100046: house_base
+    100048: //RootNode
+    100050: jar_salt
+    100052: kitchen_big_pot
+    100054: kitchen_counter
+    100056: kitchen_pan
+    100058: kitchen_roof_rack
+    100060: kitchen_sink
+    100062: kitchen_sink_l_handle
+    100064: kitchen_sink_r_handle
+    100066: knife_iron_cleaver
+    100068: knife_iron_cutting
+    100070: log_holder
+    100072: log_oak
+    100074: log_pile
+    100076: money_bag
+    100078: money_coin
+    100080: money_coin_stack
     100082: pile_of_floursacks
     100084: plant_floor
     100086: plant_fridge
@@ -61,65 +61,63 @@ ModelImporter:
     100106: spoon
     100108: spoon1
     100110: spoon_salt
-    100112: Stove:Stove:pCube2
-    100114: Stove:transform7
-    100116: stove_simple
-    100118: table_cloth
-    100120: table_oak
-    100122: vase_simple
-    100124: wall_ornament_sheild
-    100126: wall_ornament_sword
-    100128: wall_ornaments_spear
-    100130: wholesome_book_on_fridge
-    100132: wholesome_jar
-    100134: window_basic
-    100136: window_basic1
-    100138: window_basic2
-    100140: window_sill_book
-    100142: window_sill_oak
-    100144: window_sill_oak1
-    100146: window_sill_oak2
+    100112: stove_simple
+    100114: table_cloth
+    100116: table_oak
+    100118: vase_simple
+    100120: wall_ornament_sheild
+    100122: wall_ornament_sword
+    100124: wall_ornaments_spear
+    100126: wholesome_book_on_fridge
+    100128: wholesome_jar
+    100130: window_basic
+    100132: window_basic1
+    100134: window_basic2
+    100136: window_sill_book
+    100138: window_sill_oak
+    100140: window_sill_oak1
+    100142: window_sill_oak2
     400000: barrel_medium
     400002: barrel_small
     400004: barrels_loft
-    400006: Bed_shelf
-    400008: book_demon
-    400010: chair_oak
-    400012: chair_oak1
-    400014: chopping_board_wood
-    400016: clay_mug
-    400018: clay_mug1
-    400020: door_frame
-    400022: door_knob
-    400024: door_purple
-    400026: door_rug_green
-    400028: door_stone_staires
-    400030: floor_book
-    400032: fridge
-    400034: fridge_bottom_door
-    400036: fridge_bottom_door_handle
-    400038: fridge_top_door
-    400040: fridge_top_door_handle
-    400042: house_base
-    400044: //RootNode
-    400046: jar_salt
-    400048: kitchen_big_pot
-    400050: kitchen_counter
-    400052: kitchen_pan
-    400054: kitchen_roof_rack
-    400056: kitchen_sink
-    400058: kitchen_sink_l_handle
-    400060: kitchen_sink_r_handle
-    400062: knife_iron_cleaver
-    400064: knife_iron_cutting
-    400066: log_holder
-    400068: log_oak
-    400070: log_pile
-    400072: money_bag
-    400074: money_coin
-    400076: money_coin_stack
-    400078: pCube12
-    400080: pCube125
+    400006: Bed
+    400008: Bed_shelf
+    400010: book_demon
+    400012: chair_oak
+    400014: chair_oak1
+    400016: Chest
+    400018: chopping_board_wood
+    400020: clay_mug
+    400022: clay_mug1
+    400024: door_frame
+    400026: door_knob
+    400028: door_purple
+    400030: door_rug_green
+    400032: door_stone_staires
+    400034: floor_book
+    400036: fridge
+    400038: fridge_bottom_door
+    400040: fridge_bottom_door_handle
+    400042: fridge_top_door
+    400044: fridge_top_door_handle
+    400046: house_base
+    400048: //RootNode
+    400050: jar_salt
+    400052: kitchen_big_pot
+    400054: kitchen_counter
+    400056: kitchen_pan
+    400058: kitchen_roof_rack
+    400060: kitchen_sink
+    400062: kitchen_sink_l_handle
+    400064: kitchen_sink_r_handle
+    400066: knife_iron_cleaver
+    400068: knife_iron_cutting
+    400070: log_holder
+    400072: log_oak
+    400074: log_pile
+    400076: money_bag
+    400078: money_coin
+    400080: money_coin_stack
     400082: pile_of_floursacks
     400084: plant_floor
     400086: plant_fridge
@@ -135,65 +133,63 @@ ModelImporter:
     400106: spoon
     400108: spoon1
     400110: spoon_salt
-    400112: Stove:Stove:pCube2
-    400114: Stove:transform7
-    400116: stove_simple
-    400118: table_cloth
-    400120: table_oak
-    400122: vase_simple
-    400124: wall_ornament_sheild
-    400126: wall_ornament_sword
-    400128: wall_ornaments_spear
-    400130: wholesome_book_on_fridge
-    400132: wholesome_jar
-    400134: window_basic
-    400136: window_basic1
-    400138: window_basic2
-    400140: window_sill_book
-    400142: window_sill_oak
-    400144: window_sill_oak1
-    400146: window_sill_oak2
+    400112: stove_simple
+    400114: table_cloth
+    400116: table_oak
+    400118: vase_simple
+    400120: wall_ornament_sheild
+    400122: wall_ornament_sword
+    400124: wall_ornaments_spear
+    400126: wholesome_book_on_fridge
+    400128: wholesome_jar
+    400130: window_basic
+    400132: window_basic1
+    400134: window_basic2
+    400136: window_sill_book
+    400138: window_sill_oak
+    400140: window_sill_oak1
+    400142: window_sill_oak2
     2100000: lambert1
     2300000: barrel_medium
     2300002: barrel_small
     2300004: barrels_loft
-    2300006: Bed_shelf
-    2300008: book_demon
-    2300010: chair_oak
-    2300012: chair_oak1
-    2300014: chopping_board_wood
-    2300016: clay_mug
-    2300018: clay_mug1
-    2300020: door_frame
-    2300022: door_knob
-    2300024: door_purple
-    2300026: door_rug_green
-    2300028: door_stone_staires
-    2300030: floor_book
-    2300032: fridge
-    2300034: fridge_bottom_door
-    2300036: fridge_bottom_door_handle
-    2300038: fridge_top_door
-    2300040: fridge_top_door_handle
-    2300042: house_base
-    2300044: jar_salt
-    2300046: kitchen_big_pot
-    2300048: kitchen_counter
-    2300050: kitchen_pan
-    2300052: kitchen_roof_rack
-    2300054: kitchen_sink
-    2300056: kitchen_sink_l_handle
-    2300058: kitchen_sink_r_handle
-    2300060: knife_iron_cleaver
-    2300062: knife_iron_cutting
-    2300064: log_holder
-    2300066: log_oak
-    2300068: log_pile
-    2300070: money_bag
-    2300072: money_coin
-    2300074: money_coin_stack
-    2300076: pCube12
-    2300078: pCube125
+    2300006: Bed
+    2300008: Bed_shelf
+    2300010: book_demon
+    2300012: chair_oak
+    2300014: chair_oak1
+    2300016: Chest
+    2300018: chopping_board_wood
+    2300020: clay_mug
+    2300022: clay_mug1
+    2300024: door_frame
+    2300026: door_knob
+    2300028: door_purple
+    2300030: door_rug_green
+    2300032: door_stone_staires
+    2300034: floor_book
+    2300036: fridge
+    2300038: fridge_bottom_door
+    2300040: fridge_bottom_door_handle
+    2300042: fridge_top_door
+    2300044: fridge_top_door_handle
+    2300046: house_base
+    2300048: jar_salt
+    2300050: kitchen_big_pot
+    2300052: kitchen_counter
+    2300054: kitchen_pan
+    2300056: kitchen_roof_rack
+    2300058: kitchen_sink
+    2300060: kitchen_sink_l_handle
+    2300062: kitchen_sink_r_handle
+    2300064: knife_iron_cleaver
+    2300066: knife_iron_cutting
+    2300068: log_holder
+    2300070: log_oak
+    2300072: log_pile
+    2300074: money_bag
+    2300076: money_coin
+    2300078: money_coin_stack
     2300080: pile_of_floursacks
     2300082: plant_floor
     2300084: plant_fridge
@@ -228,43 +224,43 @@ ModelImporter:
     3300000: barrel_medium
     3300002: barrel_small
     3300004: barrels_loft
-    3300006: Bed_shelf
-    3300008: book_demon
-    3300010: chair_oak
-    3300012: chair_oak1
-    3300014: chopping_board_wood
-    3300016: clay_mug
-    3300018: clay_mug1
-    3300020: door_frame
-    3300022: door_knob
-    3300024: door_purple
-    3300026: door_rug_green
-    3300028: door_stone_staires
-    3300030: floor_book
-    3300032: fridge
-    3300034: fridge_bottom_door
-    3300036: fridge_bottom_door_handle
-    3300038: fridge_top_door
-    3300040: fridge_top_door_handle
-    3300042: house_base
-    3300044: jar_salt
-    3300046: kitchen_big_pot
-    3300048: kitchen_counter
-    3300050: kitchen_pan
-    3300052: kitchen_roof_rack
-    3300054: kitchen_sink
-    3300056: kitchen_sink_l_handle
-    3300058: kitchen_sink_r_handle
-    3300060: knife_iron_cleaver
-    3300062: knife_iron_cutting
-    3300064: log_holder
-    3300066: log_oak
-    3300068: log_pile
-    3300070: money_bag
-    3300072: money_coin
-    3300074: money_coin_stack
-    3300076: pCube12
-    3300078: pCube125
+    3300006: Bed
+    3300008: Bed_shelf
+    3300010: book_demon
+    3300012: chair_oak
+    3300014: chair_oak1
+    3300016: Chest
+    3300018: chopping_board_wood
+    3300020: clay_mug
+    3300022: clay_mug1
+    3300024: door_frame
+    3300026: door_knob
+    3300028: door_purple
+    3300030: door_rug_green
+    3300032: door_stone_staires
+    3300034: floor_book
+    3300036: fridge
+    3300038: fridge_bottom_door
+    3300040: fridge_bottom_door_handle
+    3300042: fridge_top_door
+    3300044: fridge_top_door_handle
+    3300046: house_base
+    3300048: jar_salt
+    3300050: kitchen_big_pot
+    3300052: kitchen_counter
+    3300054: kitchen_pan
+    3300056: kitchen_roof_rack
+    3300058: kitchen_sink
+    3300060: kitchen_sink_l_handle
+    3300062: kitchen_sink_r_handle
+    3300064: knife_iron_cleaver
+    3300066: knife_iron_cutting
+    3300068: log_holder
+    3300070: log_oak
+    3300072: log_pile
+    3300074: money_bag
+    3300076: money_coin
+    3300078: money_coin_stack
     3300080: pile_of_floursacks
     3300082: plant_floor
     3300084: plant_fridge
@@ -352,12 +348,12 @@ ModelImporter:
     4300106: plant_fridge
     4300108: door_stone_staires
     4300110: pile_of_floursacks
-    4300112: pCube12
+    4300112: Chest
     4300114: plant_floor
     4300116: wall_ornament_sheild
     4300118: wall_ornaments_spear
     4300120: wall_ornament_sword
-    4300122: pCube125
+    4300122: Bed
     4300124: Bed_shelf
     4300126: barrels_loft
     4300128: window_sill_oak1
