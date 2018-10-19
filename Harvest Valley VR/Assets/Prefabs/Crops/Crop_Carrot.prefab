@@ -21,12 +21,12 @@ GameObject:
   - component: {fileID: 4694933172706016}
   - component: {fileID: 33755749657518344}
   - component: {fileID: 23414916749443254}
-  - component: {fileID: 136753089069082516}
   - component: {fileID: 136602591361144996}
   - component: {fileID: 114706173043958872}
   - component: {fileID: 54352028188720186}
   - component: {fileID: 114706089411418220}
   - component: {fileID: 114788135573636314}
+  - component: {fileID: 114266684479278128}
   m_Layer: 0
   m_Name: Crop_Carrot
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1918524537471776}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.689, y: 0.752, z: 0.42388344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +103,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114266684479278128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918524537471776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be7c2e34b301bb4e83c20be833b045c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114706089411418220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,20 +195,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.10606198
-  m_Height: 0.57679266
+  m_Radius: 0.08232075
+  m_Height: 0.39093935
   m_Direction: 1
-  m_Center: {x: -0.006959427, y: -0.011336327, z: 0.0000000037252903}
---- !u!136 &136753089069082516
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1918524537471776}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.10606198
-  m_Height: 0.57679266
-  m_Direction: 1
-  m_Center: {x: -0.006959427, y: -0.011336327, z: 0.0000000037252903}
+  m_Center: {x: 0, y: -0.01, z: 0.01}

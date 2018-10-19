@@ -101,36 +101,43 @@ public class WaterConeEmitter : MonoBehaviour {
 
 	}
 
-	private void Awake() {
-		this.mf = GetComponent<MeshFilter>();
-		this.rnd = GetComponent<MeshRenderer>();
+    private void Awake()
+    {
+        this.mf = GetComponent<MeshFilter>();
+        this.rnd = GetComponent<MeshRenderer>();
 
-		ringCount = Mathf.CeilToInt( (ringMaxLifetime / emissionInterval) ) + 1;
-		vertsPerRing = angularSegments + 1;
-		vertexCount = ringCount * vertsPerRing;
-		quadCount = (ringCount - 1) * angularSegments;
+        ringCount = Mathf.CeilToInt((ringMaxLifetime / emissionInterval)) + 1;
+        vertsPerRing = angularSegments + 1;
+        vertexCount = ringCount * vertsPerRing;
+        quadCount = (ringCount - 1) * angularSegments;
 
-		mesh = new Mesh();
-		mesh.MarkDynamic();
-		mf.sharedMesh = mesh;
+        mesh = new Mesh();
+        mesh.MarkDynamic();
+        mf.sharedMesh = mesh;
 
-		particleRings = new ParticleRing[ringCount];
-		for( int i = 0; i < ringCount; i++ ) {
-			particleRings[i] = new ParticleRing();
-			SetParticleRingSpawnPos( particleRings[i] );
-			if( i > 0 )
-				particleRings[i].active = false;
-		}
+        particleRings = new ParticleRing[ringCount];
+        for (int i = 0; i < ringCount; i++)
+        {
+            particleRings[i] = new ParticleRing();
+            SetParticleRingSpawnPos(particleRings[i]);
+            if (i > 0)
+                particleRings[i].active = false;
+        }
 
-		triangleIndices = new int[quadCount * 2 * 3];
-		vertices = new Vector3[vertexCount];
-		uv0 = new List<Vector3>( vertexCount );
-		for( int i = 0; i < vertexCount; i++ )
-			uv0.Add( default( Vector3 ) );
+        triangleIndices = new int[quadCount * 2 * 3];
+        vertices = new Vector3[vertexCount];
+        uv0 = new List<Vector3>(vertexCount);
+        for (int i = 0; i < vertexCount; i++)
+            uv0.Add(default(Vector3));
 
-	}
+    }
 
-	/*
+    private void OnEnable()
+    {
+        StartCoroutine(Run());
+    }
+
+    /*
 	private void OnGUI() {
 		Rect r = new Rect(32,32,512,512);
 		GUILayout.BeginArea( r );
@@ -142,12 +149,23 @@ public class WaterConeEmitter : MonoBehaviour {
 		GUILayout.EndArea();
 	}*/
 
-	IEnumerator Start() {
-		while( true ) {
-			yield return new WaitForSeconds( emissionInterval );
-			EmitRing();
-		}
-	}
+    //IEnumerator Start()
+    //{
+    //    while (true)
+    //    {
+    //        yield return new WaitForSeconds(emissionInterval);
+    //        EmitRing();
+    //    }
+    //}
+
+    IEnumerator Run()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(emissionInterval);
+            EmitRing();
+        }
+    }
 	
 	public void FixedUpdate() {
 		float dt = Time.fixedDeltaTime;
