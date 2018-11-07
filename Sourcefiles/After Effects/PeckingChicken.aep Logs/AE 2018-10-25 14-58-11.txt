@@ -1,0 +1,17 @@
+Adobe After Effects v15.1.2 Windows 64 render log for project “PeckingChicken.aep”
+
+Rendering started on 2018-10-25 at 14:58:11
+
+  2018-10-25 14:58:11: Starting composition “ChickenPetting”.
+
+  Output To: C:\Users\Christoffer\Documents\HarvestValleyVR\Sourcefiles\After Effects\RenderImage\ChickenPetting.mov    2018-10-25 14:58:20: Finished composition “ChickenPetting”.
+
+
+  2018-10-25 14:58:20: Starting composition “ChickenPecking”.
+
+  Output To: C:\Users\Christoffer\Documents\HarvestValleyVR\Sourcefiles\After Effects\RenderImage\ChickenPecking.mov    2018-10-25 14:58:26: Finished composition “ChickenPecking”.
+
+
+  Total Time Elapsed: 15 Seconds
+Log closed on 2018-10-25 at 14:58:26
+

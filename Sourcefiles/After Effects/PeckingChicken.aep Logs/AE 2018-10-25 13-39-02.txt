@@ -1,0 +1,12 @@
+Adobe After Effects v15.1.2 Windows 64 render log for project “PeckingChicken.aep”
+
+Rendering started on 2018-10-25 at 13:39:02
+
+  2018-10-25 13:39:02: Starting composition “ChickenPecking”.
+
+  Output To: C:\Users\Christoffer\Desktop\KnifeThrowing\ChickenPecking\ChickenPecking_[#####].png      Render stopped by user.    2018-10-25 13:39:13: Finished composition “ChickenPecking”.
+
+
+  Total Time Elapsed: 10 Seconds
+Log closed on 2018-10-25 at 13:39:13
+
